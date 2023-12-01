@@ -22,6 +22,10 @@ You don't... short of downloading the Debian package manually, unpacking it and 
 
 Viber may also inform you that it's out of date (upper left corner I believe), but if it's still connecting to the Viber network and you really don't need any new feature it might have, I'd leave it be. Though, of course, the choice is yours.
 
+## Why is the template x64 only?
+
+Go bug Viber about that. They only provide native binaries for Ubuntu, which has dropped all 32-bit support, inlcuing x86.
+
 License: WTFPL v3.1
 
 <img src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png">
