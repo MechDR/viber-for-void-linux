@@ -6,7 +6,7 @@ I know there is the official AppImage and the unofficial Flatpak, but I just pre
 
 ## How do I build this package?
 
-You just clone this repo or download it as a zip file and copy/paste the srcpkgs directory in your cloned void-packages repo, build it using xbps-src (`./xbps-src pkg viber`) and then install it with xbps-install (`sudo xbps-install --repository hostdir/binpkgs viber`).
+You just clone this repo or download it as a zip file, extract the content, copy/paste the `srcpkgs` directory in your `void-packages` directory, build it using xbps-src (`./xbps-src pkg viber`) and then install it with xbps-install (`sudo xbps-install --repository hostdir/binpkgs viber`).
 
 ## Why isn't this in the official repo?
 
