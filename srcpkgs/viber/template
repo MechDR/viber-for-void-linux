@@ -17,7 +17,6 @@ checksum="e3b13a7a67886321b48e277b3aaae7d8210ab5bf6742139c905b443017af6460
  95ec30140789a342add8f8371ed018924de51b539056522b66f207b25cba9cad"
 nocross=yes
 nostrip=yes
-repository=nonfree
 
 do_extract() {
 	ar x ${XBPS_SRCDISTDIR}/${pkgname}-${version}/viber.deb
