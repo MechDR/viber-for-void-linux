@@ -1,0 +1,45 @@
+# Template file for 'viber'
+pkgname=viber
+version=1.0.0
+revision=1
+archs="x86_64"
+build_style=fetch
+hostmakedepends="tar xz"
+short_desc="Viber is a cross-platform VoIP and IM software application"
+maintainer="MechDR <0x4e4f@gmail.com>"
+license=custom:"Viber"
+homepage="https://www.viber.com/"
+distfiles="https://download.cdn.viber.com/cdn/desktop/Linux/viber.deb
+ http://security.debian.org/debian-security/pool/updates/main/t/tiff/libtiff5_4.2.0-1+deb11u5_amd64.deb
+ http://ftp.debian.org/debian/pool/main/libj/libjpeg-turbo/libjpeg62-turbo_2.1.5-2_amd64.deb"
+checksum="e3b13a7a67886321b48e277b3aaae7d8210ab5bf6742139c905b443017af6460
+ 7a70e9513e2b3c3a3d68f1614189f0be72b57eae2229aa64a3d7c8a3fe0639c9
+ 95ec30140789a342add8f8371ed018924de51b539056522b66f207b25cba9cad"
+nocross=yes
+nostrip=yes
+repository=nonfree
+
+do_extract() {
+	ar x ${XBPS_SRCDISTDIR}/${pkgname}-${version}/viber.deb
+	unxz -df data.tar.xz
+	tar xopf data.tar
+	unxz -df control.tar.xz
+	tar xopf control.tar
+        ar x ${XBPS_SRCDISTDIR}/${pkgname}-${version}/libtiff5_4.2.0-1+deb11u5_amd64.deb
+ 	unxz -df data.tar.xz
+	tar xopf data.tar
+	unxz -df control.tar.xz
+	tar xopf control.tar
+        ar x ${XBPS_SRCDISTDIR}/${pkgname}-${version}/libjpeg62-turbo_2.1.5-2_amd64.deb
+ 	unxz -df data.tar.xz
+	tar xopf data.tar
+	unxz -df control.tar.xz
+	tar xopf control.tar
+}
+
+do_install() {
+	vcopy usr /
+	vcopy opt /
+	vbin preinst
+	vbin postinst
+}
