@@ -1,5 +1,7 @@
 # Viber for Void Linux
 
+Make sure you read the comments in the template file.
+
 ## Why make a Viber xbps-src template?
 
 I know there is the official AppImage and the unofficial Flatpak, but I just prefer to have one package manager and let that one handle everything.
